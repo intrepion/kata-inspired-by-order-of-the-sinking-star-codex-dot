@@ -16,3 +16,9 @@ Additional acceptance: keyboard move then Z restored initial move count/position
 Automated: `npm run check` and `npm test` pass. Eleven tests include six complete solution replays with no blocked inputs and no object overlap. Source is dependency-free; CI runs the same checks on Node 24. This is syntax checking, not TypeScript typechecking.
 
 Research limitations and all deliberate mechanics boundaries are in [research.md](research.md). Review findings and publication checks are recorded below after review.
+
+## Independent review
+- Standards axis: found native Space activation of focused buttons was suppressed by the game shortcut handler. Fixed by preserving native Space behavior on buttons/links while retaining the board's swap modifier. Rechecked with normal keyboard activation of Undo and the board swap chord.
+- Spec axis: no actionable findings. Reviewer independently ran syntax checks and all 11 tests successfully.
+- Publication inspection: all tracked source, CSS artwork, tests and docs inspected; credential/personal-UI pattern scan returned no matches. No screenshots or user browser content are tracked. Full OS ignore templates fetched from the official GitHub source. Existing projects and listening processes were left untouched.
+- Further browser checks: all six completion badges survived reload; blocked input gave visible feedback without moving; R reset position and move counter. Console warnings observed came from an unrelated installed browser extension, not game files.

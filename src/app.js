@@ -43,7 +43,7 @@ const keys={ArrowUp:'up',w:'up',ArrowRight:'right',d:'right',ArrowDown:'down',s:
 let space=false;
 window.addEventListener('keydown',e=>{
  if(e.target.matches('input,textarea,select'))return;
- if(e.key===' '){e.preventDefault();space=true;return;}
+ if(e.key===' '){if(e.target.closest('button,a')){space=false;return;}e.preventDefault();space=true;return;}
  const k=e.key.length===1?e.key.toLowerCase():e.key;
  if(keys[k]){e.preventDefault();action(keys[k],space||castMode);}
  else if(k==='z'){e.preventDefault();undo();}
