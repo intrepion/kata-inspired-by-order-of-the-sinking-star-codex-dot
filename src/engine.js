@@ -5,14 +5,12 @@ export function occupant(s,x,y){const c=s.crystals.findIndex(p=>at(p,x,y));if(c>
 export function floor(l,x,y){return y>=0&&y<l.map.length&&x>=0&&x<l.map[y].length&&l.map[y][x]!=='#'&&l.map[y][x]!==' ';}
 function put(s,o,p){if(o.kind==='heroes')s.heroes[o.index].pos=p;else s.crystals[o.index]=p;}
 export function won(l,s){return s.heroes.every(h=>l.exits.some(p=>at(p,...h.pos)));}
-export function step(l,state,dir,cast=false){
+export function step(l,state,dir){
  const d=directions[dir];if(!d)return state;
  const s=structuredClone(state),h=s.heroes[s.active],[x,y]=h.pos,[dx,dy]=d,nx=x+dx,ny=y+dy;
- if(cast){
-  if(h.role!=='seer')return state;
+ if(h.role==='seer'){
   let tx=nx,ty=ny;
   while(floor(l,tx,ty)){const o=occupant(s,tx,ty);if(o){put(s,o,[x,y]);h.pos=[tx,ty];s.moves++;return s;}tx+=dx;ty+=dy;}
-  return state;
  }
  if(!floor(l,nx,ny))return state;
  const front=occupant(s,nx,ny);

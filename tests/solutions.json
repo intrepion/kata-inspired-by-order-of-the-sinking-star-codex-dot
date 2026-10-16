@@ -2,383 +2,329 @@
   [
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ]
   ],
   [
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "left",
-      false
+      "left"
     ],
     [
       0,
-      "left",
-      false
+      "left"
     ],
     [
       0,
-      "up",
-      false
+      "up"
     ],
     [
       0,
-      "left",
-      false
+      "left"
     ]
   ],
   [
     [
       0,
-      "right",
-      true
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ]
   ],
   [
     [
       1,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "down",
-      false
+      "down"
     ],
     [
       1,
-      "left",
-      false
+      "left"
     ],
     [
       1,
-      "left",
-      false
+      "left"
     ],
     [
       0,
-      "up",
-      false
+      "up"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "up",
-      false
+      "up"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ]
   ],
   [
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "right",
-      true
+      "right"
     ],
     [
       1,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "up",
-      true
+      "up"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "right",
-      true
+      "right"
     ]
   ],
   [
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "down",
-      false
+      "down"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       0,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "right",
-      false
+      "right"
     ],
     [
       1,
-      "up",
-      false
+      "down"
     ],
     [
       1,
-      "up",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "down",
-      false
-    ],
-    [
-      1,
-      "down",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "left",
-      false
-    ],
-    [
-      1,
-      "left",
-      false
-    ],
-    [
-      1,
-      "left",
-      false
-    ],
-    [
-      1,
-      "up",
-      false
-    ],
-    [
-      1,
-      "up",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "down",
-      false
-    ],
-    [
-      1,
-      "down",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
-    ],
-    [
-      1,
-      "right",
-      false
+      "down"
     ],
     [
       2,
-      "right",
-      false
+      "right"
     ],
     [
       2,
-      "right",
-      false
+      "up"
     ],
     [
       2,
-      "up",
-      false
+      "up"
     ],
     [
       2,
-      "up",
-      false
+      "up"
     ],
     [
       2,
-      "up",
-      false
+      "up"
     ],
     [
       2,
-      "up",
-      false
+      "left"
     ],
     [
       2,
-      "left",
-      false
+      "left"
     ],
     [
       2,
-      "left",
-      false
+      "right"
     ],
     [
-      2,
-      "right",
-      true
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "down"
+    ],
+    [
+      1,
+      "down"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "left"
+    ],
+    [
+      1,
+      "left"
+    ],
+    [
+      1,
+      "left"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "up"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "down"
+    ],
+    [
+      1,
+      "down"
+    ],
+    [
+      1,
+      "right"
+    ],
+    [
+      1,
+      "right"
     ]
   ]
 ]

@@ -58,7 +58,6 @@ kbd{display:inline-block;font:10px system-ui;color:var(--muted);border:1px solid
 .keys{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:10px;color:var(--muted);margin-top:18px}
 .pad{display:flex;justify-content:center;gap:7px;margin-top:18px}
 .pad button{padding:5px 14px;font-size:13px}
-#cast[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
 #completion{margin-top:20px;padding:20px;background:#2b4842;border:1px solid #a9a16c;border-radius:9px}
 #completion p{font-size:12px}
 #completion button{margin-top:12px}
