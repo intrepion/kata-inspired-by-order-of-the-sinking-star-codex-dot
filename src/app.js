@@ -11,10 +11,11 @@ function updateSession(next){session=next;({state,history}=session);}
 function selectHero(n){if(n>=state.heroes.length)return;updateSession({...session,state:{...state,active:n}});render();}
 function load(n){index=n;updateSession(createSession(levels[n]));$('status').textContent='';render();}
 function action(dir){
+ if(state.fallen){$('status').textContent='The watcher caught a companion. Undo or restart.';return;}
  if(won(levels[index],state))return;
  const next=move(session,dir);
  if(next===session){$('status').textContent='The way is blocked. Try another approach or another hero.';return;}
- updateSession(next);$('status').textContent='';
+ updateSession(next);$('status').textContent=state.fallen?'The watcher caught a companion. Undo or restart.':'';
  if(won(levels[index],state)&&!completed.includes(index)){completed.push(index);try{localStorage.setItem(saveKey,JSON.stringify(completed));}catch{}}
  render();
 }
@@ -29,13 +30,16 @@ function render(){
   const tile=document.createElement('div');tile.className='tile'+(cell==='#'?' wall':'');
   const exit=l.exits.some(p=>p[0]===x&&p[1]===y);if(exit)tile.classList.add('exit');
   let label=`${x},${y}: ${cell==='#'?'wall':exit?'exit':'floor'}`;
+  const sentinel=(l.sentinels||[]).some(p=>p[0]===x&&p[1]===y),danger=(l.sentinels||[]).some(p=>Math.abs(p[0]-x)+Math.abs(p[1]-y)===1);
+  if(danger){tile.classList.add('danger');label+='; watcher danger';}
+  if(sentinel){const watcher=document.createElement('div');watcher.className='watcher';watcher.textContent='✹';tile.append(watcher);label+='; watcher';}
   if(state.crystals.some(p=>p[0]===x&&p[1]===y)){const gem=document.createElement('div');gem.className='crystal';tile.append(gem);label+='; crystal';}
   const hn=state.heroes.findIndex(h=>h.pos[0]===x&&h.pos[1]===y);
   if(hn>=0){const h=state.heroes[hn],figure=document.createElement('div');figure.className=`hero ${h.role}${hn===state.active?' selected':''}`;figure.innerHTML=`<span>${abilities[h.role][2]}</span>`;tile.append(figure);label+=`; ${abilities[h.role][0]}${hn===state.active?' selected':''}`;tile.onclick=()=>selectHero(hn);}
   tile.setAttribute('aria-label',label);board.append(tile);
  }));
  $('heroes').replaceChildren(...state.heroes.map((h,n)=>{const b=document.createElement('button');b.className=n===state.active?'selected':'';b.setAttribute('aria-pressed',String(n===state.active));b.innerHTML=`${n+1} · ${abilities[h.role][0]}<small>${abilities[h.role][1]}</small>`;b.onclick=()=>selectHero(n);return b;}));
- $('completion').hidden=!solved;$('complete-text').textContent=index===levels.length-1?'All six passages crossed. Revisit any passage to explore another solution.':'Every companion has found a way through.';
+ $('completion').hidden=!solved;$('complete-text').textContent=completed.length===levels.length?`All ${levels.length} passages crossed. Revisit any passage to explore another solution.`:'Every companion has found a way through.';
  $('next').textContent=index===levels.length-1?'Return to the first passage →':'Continue the expedition →';
 }
 $('undo').onclick=undo;$('restart').onclick=()=>load(index);$('hint').onclick=()=>{$('status').textContent=levels[index].hint;};$('next').onclick=()=>load((index+1)%levels.length);

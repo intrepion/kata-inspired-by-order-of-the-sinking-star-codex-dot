@@ -1,7 +1,7 @@
 import {createState,step,won} from './engine.js';
 export function createSession(level){return {level,state:createState(level),history:[]};}
 export function move(session,dir){
- if(won(session.level,session.state))return session;
+ if(session.state.fallen||won(session.level,session.state))return session;
  const state=step(session.level,session.state,dir);
  return state===session.state?session:{...session,state,history:[...session.history,session.state]};
 }

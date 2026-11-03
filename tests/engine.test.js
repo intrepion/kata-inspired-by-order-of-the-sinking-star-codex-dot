@@ -11,3 +11,7 @@ import {levels} from '../src/levels.js';
 import {readFileSync} from 'node:fs';
 const solutions=JSON.parse(readFileSync(new URL('./solutions.json',import.meta.url),'utf8'));
 for(const [n,level] of levels.entries())test(`Passage ${n+1}: authored solution reaches every exit without blocked moves`,()=>{let s=createState(level);for(const [active,dir] of solutions[n]){const selected={...s,active};s=step(level,selected,dir);assert.notEqual(s,selected,`${dir} must succeed`);const cells=[...s.heroes.map(h=>h.pos),...s.crystals].map(p=>p.join(','));assert.equal(new Set(cells).size,cells.length,'objects may not overlap');}assert.equal(won(level,s),true);});
+test('a watcher blocks its tile and sees every hero after a swap',()=>{
+ const l={map:['########','#......#','#......#','#......#','########'],heroes:[{role:'seer',pos:[1,1]},{role:'warden',pos:[5,1]}],crystals:[],sentinels:[[1,2]],exits:[[5,1],[1,1]]};
+ const s=createState(l);assert.equal(step(l,s,'down'),s);const moved=step(l,s,'right');assert.equal(moved.fallen,true);assert.equal(won(l,moved),false);
+});
