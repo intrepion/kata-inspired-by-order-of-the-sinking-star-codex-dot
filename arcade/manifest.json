@@ -1,6 +1,30 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "gameId": "kata-inspired-by-order-of-the-sinking-star-codex-dot",
   "playUrl": "https://intrepion.github.io/kata-inspired-by-order-of-the-sinking-star-codex-dot/",
-  "screenshots": []
+  "screenshots": [
+    {
+      "path": "arcade/screenshots/ci-20261103-01.jpg",
+      "sha256": "afc872d46b4350daf87ea8c50a814c787b7745fba5099ecffa6d7cf765d947c7",
+      "alt": "Threefold Passage gameplay",
+      "provenance": {
+        "kind": "ci_gameplay_capture",
+        "sourcePath": "arcade/capture-evidence/ci-20261103-01.png",
+        "sourceSha256": "7527745bea5027fc215ace19972cc9cd005f44c0dbef423c63de5b81d6eb6858",
+        "captureCommit": "c0a39fc7627f34a026719a8b4fa35ffa16062014",
+        "workflowRunId": "41618866502",
+        "inputHashes": {
+          "index.html": "61cd1b416e38248efbc217f17c03c61609795ca4bd2969f39bdb4debae1b904c",
+          "src/app.js": "5e898b84dbef45319d5c0f78f9d360856bf9e641ba37f6f421a8a1983afc1846",
+          "src/engine.js": "3dfb89fb8bd299a6ccef6169e5fd29463b30884e0ee9a56ba7f0d400b3748ce8",
+          "src/levels.js": "3f9769f6bfa0b0f3887592f167ed2263e7c13a224b0890873b4df662d933cf10",
+          "src/session.js": "51ad12b5f652026f945ecdd46ba17cc42ffd04479defef73bd71b83b060fde2f",
+          "style.css": "8b2bc5b23de9308d1c70fdbbbb9ef44fbaf80be81b78e4da261b4c0b55d5318d"
+        },
+        "publishedFilesVerifiedAt": "2026-11-03T10:25:09Z",
+        "captureRecordPath": "arcade/capture-evidence/ci-20261103-record.json",
+        "captureRecordSha256": "796687a54b32992d670210c5cfbef2977f0cb0b579ba7ef736286138ae53ff91"
+      }
+    }
+  ]
 }
