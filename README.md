@@ -10,7 +10,7 @@ Requires Node.js 22 or later. No packages or build step required.
 npm start
 ```
 
-Open **http://127.0.0.1:5217**. This server binds only to the local Mac. Override with `PORT=5220 npm start` if needed. No public website deployment is configured.
+Open **http://127.0.0.1:5217**. This server binds only to the local Mac. Override with `PORT=5220 npm start` if needed. The browser edition is also available on GitHub Pages.
 
 ## Controls and objective
 
@@ -43,3 +43,7 @@ The root `.gitignore` includes complete Linux, Windows and macOS Global template
 ## License
 
 [MIT](LICENSE). Original game names belong to their respective owners. No affiliation with Thekla or Arc Games.
+
+## Play online
+
+[Play on GitHub Pages](https://intrepion.github.io/kata-inspired-by-order-of-the-sinking-star-codex-dot/). Return to the [Kata Arcade](https://intrepion.github.io/).
